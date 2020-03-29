@@ -9,9 +9,9 @@ $(document).ready(function () {
         console.log($(this).attr('id'));
         $('#state').text($(this).attr('title'));
         $('#total').text("0");
-        var arr = JSON.parse(text);
-        var rec_arr = JSON.parse(recovered);
-        var death_arr = JSON.parse(death);
+//        var arr = JSON.parse(text);
+//        var rec_arr = JSON.parse(recovered);
+//        var death_arr = JSON.parse(death);
         console.log("DATA: "+arr[$(this).attr('title')]);
         $('#total').text(arr[$(this).attr('title')]);
         $('#recovered').text(rec_arr[$(this).attr('title')]);
@@ -35,7 +35,7 @@ $(document).ready(function () {
 
 // FOR ALL CASES
 $(document).ready(function(){
-    fetch('https://script.googleusercontent.com/macros/echo?user_content_key=mF_vnYC5aerRdN8t3jbMVa_LttafxFBk_GlAiRcOdZnMvUNA3qLUvAvaGVFmWmshYrPNKxmpMBns7YqNx_noTyVWDtXG8jhTm5_BxDlH2jW0nuo2oDemN9CCS2h10ox_1xSncGQajx_ryfhECjZEnKXFvsR88vL4WiBr168omFadgngDnj25DLpEvLRaiIpzZr1NvbW-Bo38vshdDBv10tpytj_A4aoE&lib=Mm1FD1HVuydJN5yAB3dc_e8h00DPSBbB3')
+    fetch('https://script.googleusercontent.com/macros/echo?user_content_key=w2R19KPGifjm_G7_PryH0B9LvvYRGFX3MDbt91E46aUw8W4lVuMdckUyXf9fNF8YhbKvNGl_Hn1egcqK5izTSUUNqyvwk3Oim5_BxDlH2jW0nuo2oDemN9CCS2h10ox_1xSncGQajx_ryfhECjZEnOSn2qq3tIQu_cZ30CRrk2nQMyE-C-0yK9EUE7hAU4GSaWVU7YzNJeCluyOhnFMFPQZeeUM_QTzE&lib=M6u84tkoeNjDyoFZHGcGudZydTGUuaopA')
             .then(response => {
                 return response.json()
             })
@@ -43,6 +43,7 @@ $(document).ready(function(){
                 // Work with JSON data here
                 
                 text = JSON.stringify(data);
+                arr = JSON.parse(text);
               
                 var obj = JSON.parse(text, function (key, value) {
                     total_case = total_case + value;
@@ -59,7 +60,7 @@ $(document).ready(function(){
 
 // FOR ALL RECOVERED
 $(document).ready(function(){
-    fetch('https://script.googleusercontent.com/macros/echo?user_content_key=-Iv_lynZNY-I6ly92aUfjHUjWVqFlchptzMtPlba8pVOqqprww4LCWCQFik-4jIvIvR2MpFLbKAZOnAKNe3LeCI2RGE27jgKm5_BxDlH2jW0nuo2oDemN9CCS2h10ox_1xSncGQajx_ryfhECjZEnKu-tewsEhB95rFiMjS2iZeGzXZjLGlRtby6uRBE-_AD8mQw1mCR8VU1XZita4E94fYIZDdlYyLs&lib=M3HJC6ZIata2fqmphc248BZydTGUuaopA')
+    fetch('https://script.googleusercontent.com/macros/echo?user_content_key=N9KW-SFZbBlnG_MVfUakROTTfTB0n3K-qORzViaeZQ_j9Km6C7hwAnkFMU6AIu9exm1XdTvS8GqAYEqSXUxg4WYiX8FHALl8m5_BxDlH2jW0nuo2oDemN9CCS2h10ox_1xSncGQajx_ryfhECjZEnFhFOLl_ALu2RqZ9A0ZGwCLQVi6DoweAa5McigCVxISM7fzFSVxTmuwwIPiXWdPRRkWY2nZ7HPw5&lib=MqMCQsxfQ7f4IByiLio3qRl8-k_s04r_S')
             .then(response => {
                 return response.json()
             })
@@ -67,6 +68,7 @@ $(document).ready(function(){
                 // Work with JSON data here
                 
                 recovered = JSON.stringify(data);
+                rec_arr = JSON.parse(recovered);
               
                 var obj = JSON.parse(recovered, function (key, value) {
                     total_recovered = total_recovered + value;
@@ -83,7 +85,7 @@ $(document).ready(function(){
 
 // FOR ALL DEATH
 $(document).ready(function(){
-    fetch('https://script.googleusercontent.com/macros/echo?user_content_key=KOMc6gRxczG9Ltu_2RpOXVPlj7vufsytj_64xxDQ7sD-GQa-mtGlEtqnI_Ou079hbyL2dl9HDisFFkaY-CmEG9e-ksfYUtXUm5_BxDlH2jW0nuo2oDemN9CCS2h10ox_1xSncGQajx_ryfhECjZEnBzSir58wwTfae2g-FxLAmBmN3cGrxmsQWq7iQZyZYI1T0Dt9YO4Fhcgv6cZCDRTfCvom--NyM7Y&lib=MzN3adbdSZXzDyXCwJAdtGpydTGUuaopA')
+    fetch('https://script.googleusercontent.com/macros/echo?user_content_key=wzRktJO7Ke3ZSJKq1C8-4MvI7e7FWh35MpbkzzF_3KduFPLZh4f1M7Xt0cr892o62G8WGI55bAqo3Etc_CFheDWovqhBIFEkm5_BxDlH2jW0nuo2oDemN9CCS2h10ox_1xSncGQajx_ryfhECjZEnE-cZVz8Ku-tz2Z_IaUTsidSXqkFm6Q6Ybl_518kqH9o4DMx9oejlIyC5qbo_P4xxmLslupA9sGc&lib=MeP96nEBGVgla966FWXoX_5ydTGUuaopA')
             .then(response => {
                 return response.json()
             })
@@ -91,6 +93,7 @@ $(document).ready(function(){
                 // Work with JSON data here
                 
                 death = JSON.stringify(data);
+                death_arr = JSON.parse(death);
               
                 var obj = JSON.parse(death, function (key, value) {
                     total_death = total_death + value;
