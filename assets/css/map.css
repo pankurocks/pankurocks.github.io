@@ -1,0 +1,28 @@
+path:hover {
+  fill: red;
+}
+
+.svg_container{
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-content: center;  
+}
+
+.data{
+    float: left;
+    margin: 10px;
+    display: inline-block;
+}
+
+
+
+body{
+    background-color: #41c0cc;
+    background-image: linear-gradient(-90deg, #41c0cc, #41cca5);
+}
+div{
+    color: #202020;
+    fill: currentColor;
+}
+
