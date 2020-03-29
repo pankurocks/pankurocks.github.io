@@ -1,5 +1,5 @@
 console.log("JS Started");
-
+var total_case = 0;
 
 
 $(document).ready(function () {
@@ -36,14 +36,12 @@ $(document).ready(function(){
                 // Work with JSON data here
                 console.log(data)
                 text = JSON.stringify(data);
-    
+              
                 var obj = JSON.parse(text, function (key, value) {
-                    if (key == "Andhra Pradesh") {
-                        console.log("AP" + value);
-                    } else {
-                        console.log(value);
-                    }
+                    total_case = total_case + value;
+                    console.log("Total: "+total_case);
                 });
+                $('#total').text(parseInt(total_case));
                 
 
             })
