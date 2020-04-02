@@ -111,7 +111,7 @@
 
 
 //---- TEMP JAVASCRIPT CODE -----
-var data = [["Name of State / UT", "Total Confirmed cases", "Death", "Cured/Discharged/Migrated"], ["Andhra Pradesh", 40, 0, 1], ["Andaman Nicobar", 10, 0, 0], ["Bihar", 15, 1, 0], ["Chandigarh", 13, 0, 0], ["Chhattisgarh", 8, 0, 0], ["Delhi", 97, 2, 6], ["Goa", 5, 0, 0], ["Gujarat", 73, 6, 3], ["Haryana", 40, 0, 21], ["Himachal Pradesh", 3, 1, 0], ["Jammu & Kashmir", 54, 2, 2], ["Karnataka", 83, 3, 5], ["Kerala", 234, 1, 19], ["Ladakh", 13, 0, 3], ["Madhya Pradesh", 47, 3, 0], ["Maharashtra", 216, 9, 39], ["Manipur", 1, 0, 0], ["Mizoram", 1, 0, 0], ["Odisha", 3, 0, 0], ["Puducherry", 1, 0, 0], ["Punjab", 41, 3, 1], ["Rajasthan", 74, 0, 3], ["Tamil Nadu", 74, 1, 4], ["Telengana", 79, 1, 1], ["Uttarakhand", 7, 0, 2], ["Uttar Pradesh", 101, 0, 14], ["West Bengal", 26, 2, 0]];
+var data = [["Name of State / UT", "Total Confirmed cases", "Death", "Cured/Discharged/Migrated"], ["Andhra Pradesh", 83, 0, 1], ["Andaman Nicobar", 10, 0, 0], ["Bihar", 23, 1, 0], ["Chandigarh", 13, 0, 0], ["Chhattisgarh", 8, 0, 0], ["Delhi", 152, 2, 6], ["Goa", 5, 0, 0], ["Gujarat", 73, 6, 3], ["Haryana", 40, 0, 21], ["Himachal Pradesh", 3, 1, 0], ["Jammu and Kashmir", 54, 2, 2], ["Karnataka", 83, 3, 5], ["Kerala", 234, 1, 19], ["Ladakh", 13, 0, 3], ["Madhya Pradesh", 47, 3, 0], ["Maharashtra", 302, 9, 39], ["Manipur", 1, 0, 0], ["Mizoram", 1, 0, 0], ["Odisha", 3, 0, 0], ["Puducherry", 1, 0, 0], ["Punjab", 41, 3, 1], ["Rajasthan", 74, 0, 3], ["Tamil Nadu", 74, 1, 4], ["Telengana", 79, 1, 1], ["Uttarakhand", 7, 0, 2], ["Uttar Pradesh", 101, 0, 14], ["West Bengal", 26, 2, 0]];
 var total = 0;
 var recovered = 0;
 var death =0;
@@ -142,7 +142,7 @@ $(document).ready(function(){
                   console.log(total);
                   console.log(recovered);
                   console.log(death);
-                  $('#total').text(1637);
-                  $('#recovered').text(133);
-                  $("#death").text(38);
+                  $('#total').text(1834);
+                  $('#recovered').text(144);
+                  $("#death").text(41);
                   });
