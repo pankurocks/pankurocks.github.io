@@ -142,7 +142,7 @@ $(document).ready(function(){
                   console.log(total);
                   console.log(recovered);
                   console.log(death);
-                  $('#total').text(2301);
-                  $('#recovered').text(157);
-                  $("#death").text(56);
+                  $('#total').text(2547);
+                  $('#recovered').text(163);
+                  $("#death").text(62);
                   });
