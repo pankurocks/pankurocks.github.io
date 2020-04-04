@@ -18,6 +18,20 @@ and open the template in the editor.
 </head>
 <body>
 
+<div align="center">
+    <h1> APPLICATION NOW MOVED TO www.covidindia.tech </h1>
+    <h1> Redirecting you in <span id="counter">10</span> seconds....</h1>
+</div>
+<script>
+    setInterval(function() {
+                var spans = document.querySelector("#counter");
+                var count = spans.textContent * 1 - 1;
+                spans.textContent = count;
+                if (count <= 6) {
+                window.location.replace("https://covidindia.tech");
+                }
+                }, 1000);
+    </script>
     <section class="section padding-top-70 padding-bottom-0" id="features">
         <div class="container">
             <div class="row">
